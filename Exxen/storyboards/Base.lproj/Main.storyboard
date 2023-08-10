@@ -18,21 +18,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="400" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="xIC-52-RIi">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="300" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="xIC-52-RIi">
+                                <rect key="frame" x="0.0" y="92" width="414" height="804"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="sectionIndexBackgroundColor" name="BackgroundColor"/>
                                 <color key="sectionIndexTrackingBackgroundColor" name="BackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="tableViewCell" id="RVt-Ck-ikK" customClass="MovieTableViewCell" customModule="Exxen" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="414" height="400"/>
+                                        <rect key="frame" x="0.0" y="50" width="414" height="300"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="RVt-Ck-ikK" id="RKA-7s-NM7">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="400"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="300"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="SrD-VY-IVt">
-                                                    <rect key="frame" x="20" y="11" width="374" height="378"/>
+                                                    <rect key="frame" x="20" y="11" width="374" height="278"/>
                                                     <color key="backgroundColor" name="BackgroundColor"/>
                                                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="6Dq-zz-XAN">
                                                         <size key="itemSize" width="400" height="250"/>
@@ -42,39 +42,19 @@
                                                     </collectionViewFlowLayout>
                                                     <cells>
                                                         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collectionViewCell" id="bIm-ed-iFW" customClass="MovieCollectionViewCell" customModule="Exxen" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="14" width="200" height="350"/>
+                                                            <rect key="frame" x="0.0" y="14" width="150" height="250"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="6uQ-M4-qFP">
-                                                                <rect key="frame" x="0.0" y="0.0" width="200" height="350"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="150" height="250"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <subviews>
                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sizidinliyorum" translatesAutoresizingMaskIntoConstraints="NO" id="42B-2J-rfk">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="200" height="350"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="150" height="250"/>
                                                                         <constraints>
-                                                                            <constraint firstAttribute="width" constant="200" id="9Qd-tU-dma"/>
-                                                                            <constraint firstAttribute="height" constant="350" id="Xvx-AT-ooW"/>
+                                                                            <constraint firstAttribute="width" constant="150" id="9Qd-tU-dma"/>
+                                                                            <constraint firstAttribute="height" constant="250" id="Xvx-AT-ooW"/>
                                                                         </constraints>
                                                                     </imageView>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sizi Dinliyorum" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YbH-UK-uys">
-                                                                        <rect key="frame" x="73" y="542" width="228" height="42"/>
-                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="31"/>
-                                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                        <color key="shadowColor" systemColor="systemGray2Color"/>
-                                                                    </label>
-                                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XKB-cD-y4e">
-                                                                        <rect key="frame" x="133" y="592" width="109" height="35"/>
-                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                        <state key="normal" title="Button"/>
-                                                                        <buttonConfiguration key="configuration" style="filled" title="Hemen İzle">
-                                                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                            <color key="baseBackgroundColor" systemColor="systemYellowColor"/>
-                                                                        </buttonConfiguration>
-                                                                        <connections>
-                                                                            <action selector="watchButtonAct:" destination="bIm-ed-iFW" eventType="touchUpInside" id="ArL-YJ-Wfa"/>
-                                                                        </connections>
-                                                                    </button>
                                                                 </subviews>
                                                                 <constraints>
                                                                     <constraint firstItem="42B-2J-rfk" firstAttribute="top" secondItem="6uQ-M4-qFP" secondAttribute="top" id="5vX-dR-TcQ"/>
@@ -86,7 +66,6 @@
                                                             <color key="backgroundColor" name="BackgroundColor"/>
                                                             <connections>
                                                                 <outlet property="movieImageView" destination="42B-2J-rfk" id="4QI-RI-GqH"/>
-                                                                <outlet property="movieNameLabel" destination="YbH-UK-uys" id="cwu-pR-Eai"/>
                                                             </connections>
                                                         </collectionViewCell>
                                                     </cells>
@@ -112,12 +91,14 @@
                         <constraints>
                             <constraint firstItem="xIC-52-RIi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="35f-3d-1Bi"/>
                             <constraint firstAttribute="bottom" secondItem="xIC-52-RIi" secondAttribute="bottom" id="CVB-cb-IMZ"/>
-                            <constraint firstItem="xIC-52-RIi" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="g9c-hX-Bon"/>
+                            <constraint firstItem="xIC-52-RIi" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="lSx-HZ-0dL"/>
                             <constraint firstItem="xIC-52-RIi" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="xKM-qu-U81"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="7jC-Ey-byx">
-                        <barButtonItem key="leftBarButtonItem" title="Item" id="sbf-oW-tsh"/>
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="playlist" id="sbf-oW-tsh">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Item" image="magnifyingglass" catalog="system" id="1Rj-7z-gNs"/>
                     </navigationItem>
                     <connections>
@@ -249,6 +230,7 @@
         <image name="home" width="32" height="32"/>
         <image name="list" width="32" height="32"/>
         <image name="magnifyingglass" catalog="system" width="128" height="117"/>
+        <image name="playlist" width="32" height="32"/>
         <image name="sizidinliyorum" width="600" height="900"/>
         <image name="sport" width="32" height="32"/>
         <image name="user" width="32" height="32"/>
@@ -257,9 +239,6 @@
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGray2Color">
-            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

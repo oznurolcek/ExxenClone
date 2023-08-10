@@ -16,6 +16,8 @@ class MovieTableViewCell: UITableViewCell {
         moviesCollectionView.dataSource = self
         moviesCollectionView.delegate = self
         
+        moviesCollectionView.frame = contentView.bounds
+        
         
     }
 
@@ -36,7 +38,7 @@ extension MovieTableViewCell: UICollectionViewDelegate, UICollectionViewDataSour
         
         let cell = moviesCollectionView.dequeueReusableCell(withReuseIdentifier: "collectionViewCell", for: indexPath) as! MovieCollectionViewCell
         cell.movieImageView.image = UIImage(named: movies[indexPath.row].imageName!)
-        cell.movieNameLabel.text = movies[indexPath.row].name
+        cell.layer.cornerRadius = 10
         
         return cell
     }

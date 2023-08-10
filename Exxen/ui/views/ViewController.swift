@@ -29,6 +29,9 @@ class ViewController: UIViewController {
         moviesTableView.delegate = self
         moviesTableView.dataSource = self
         
+        view.backgroundColor = UIColor(named: "BackgroundColor")
+        
+        //MARK: logo title
         let logoContainer = UIView(frame: CGRect(x: 0, y: 0, width: 270, height: 40))
 
          let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 270, height: 40))
@@ -41,12 +44,7 @@ class ViewController: UIViewController {
         navigationItem.rightBarButtonItem?.tintColor = .white
         
         moviesTableView.backgroundColor = UIColor(named: "BackgroundColor")
-        
         moviesTableView.sectionHeaderTopPadding = 0
-        
-        
-        
-
 
     }
 
@@ -54,17 +52,14 @@ class ViewController: UIViewController {
 }
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 300
-    }
     func numberOfSections(in tableView: UITableView) -> Int {
         return movies.count
     }
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
 //        print("section: \(movies[section].section!)")
 
-
-        return movies[section].section as? String
+        return "deneme"
+//        return movies[section].section as? String
         
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -75,6 +70,14 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = moviesTableView.dequeueReusableCell(withIdentifier: "tableViewCell", for: indexPath) as! MovieTableViewCell
         cell.moviesCollectionView.tag = indexPath.section
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 300
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 40
     }
     
 //    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
