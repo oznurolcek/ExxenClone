@@ -10,6 +10,9 @@ import UIKit
 class MovieTableViewCell: UITableViewCell {
 
     @IBOutlet weak var moviesCollectionView: UICollectionView!
+    
+    var collectionScrollCount = 50
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -31,13 +34,13 @@ class MovieTableViewCell: UITableViewCell {
 
 extension MovieTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return Sections.allCases.count
+        return collectionScrollCount
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = moviesCollectionView.dequeueReusableCell(withReuseIdentifier: "collectionViewCell", for: indexPath) as! MovieCollectionViewCell
-        cell.movieImageView.image = UIImage(named: movies[indexPath.row].imageName!)
+        cell.movieImageView.image = UIImage(named: movieData[(moviesCollectionView.tag % movieData[moviesCollectionView.tag].movie!.count)].movie![indexPath.row % movieData[moviesCollectionView.tag].movie!.count].imageName!)
         cell.layer.cornerRadius = 10
         
         return cell
@@ -46,5 +49,10 @@ extension MovieTableViewCell: UICollectionViewDelegate, UICollectionViewDataSour
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         cell.backgroundColor = .black
     }
-    
+
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        print(collectionScrollCount)
+        collectionScrollCount += 50
+        moviesCollectionView.reloadData()
+    }
 }

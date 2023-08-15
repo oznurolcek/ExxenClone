@@ -7,29 +7,17 @@
 
 import UIKit
 
-var movies: [Movies] = [
-    Movies(id: 1, name: "Sizi Dinliyorum", imageName: "sizidinliyorum", section: .highlights),
-    Movies(id: 2, name: "Konuşanlar", imageName: "konusanlar", section: .highlights),
-    Movies(id: 3, name: "O Ses Türkiye Rap", imageName: "osesturkiyerap", section: .highlights),
-    Movies(id: 4, name: "Gibi", imageName: "gibi", section: .highlights),
-    Movies(id: 5, name: "Leyla ile Mecnun", imageName: "leylailemecnun", section: .highlights),
-    Movies(id: 6, name: "Hükümsüz", imageName: "hukumsuz", section: .highlights),
-    Movies(id: 7, name: "Aşk Kumardır", imageName: "askkumardir", section: .highlights),
-    Movies(id: 8, name: "Sadece Arkadaşız", imageName: "sadecearkadasiz", section: .highlights),
-    Movies(id: 9, name: "Tolgshow Filtresiz", imageName: "tolgshowfiltresiz", section: .highlights)
-]
-
 class ViewController: UIViewController {
     
     @IBOutlet weak var moviesTableView: UITableView!
+    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         moviesTableView.delegate = self
         moviesTableView.dataSource = self
-        
-        view.backgroundColor = UIColor(named: "BackgroundColor")
         
         //MARK: logo title
         let logoContainer = UIView(frame: CGRect(x: 0, y: 0, width: 270, height: 40))
@@ -43,6 +31,11 @@ class ViewController: UIViewController {
         
         navigationItem.rightBarButtonItem?.tintColor = .white
         
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        navigationController?.navigationBar.shadowImage = UIImage()
+        navigationController?.navigationBar.isTranslucent = true
+
+        
         moviesTableView.backgroundColor = UIColor(named: "BackgroundColor")
         moviesTableView.sectionHeaderTopPadding = 0
 
@@ -52,32 +45,73 @@ class ViewController: UIViewController {
 }
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return movies.count
-    }
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-//        print("section: \(movies[section].section!)")
+    
 
-        return "deneme"
-//        return movies[section].section as? String
-        
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return movieData.count
     }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        switch section {
+        case 0:
+            return nil
+        default:
+            let view = UIView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
+            let label = UILabel(frame: CGRect(x: 15, y: 5, width: tableView.frame.width, height: 20))
+            label.font = UIFont(name: "Lato", size: 20.0)
+            label.text = movieData[section].sectionType
+            label.textColor = .white
+            label.textAlignment = .natural
+            view.addSubview(label)
+            return view
+        }
+    }
+    
+//    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+//        switch section {
+//        case 0:
+//            return nil
+//        default:
+//            return movieData[section].sectionType
+//        }
+//
+//    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = moviesTableView.dequeueReusableCell(withIdentifier: "tableViewCell", for: indexPath) as! MovieTableViewCell
-        cell.moviesCollectionView.tag = indexPath.section
-        return cell
+        switch indexPath.section {
+        case 0:
+            let cell = moviesTableView.dequeueReusableCell(withIdentifier: "highlightTableViewCell", for: indexPath) as! HighlightTableViewCell
+            cell.moviesCollectionView.tag = indexPath.section
+            return cell
+        default:
+            let cell = moviesTableView.dequeueReusableCell(withIdentifier: "tableViewCell", for: indexPath) as! MovieTableViewCell
+            cell.moviesCollectionView.tag = indexPath.section
+            return cell
+        }
+        
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 300
+        switch indexPath.section {
+        case 0:
+            return 500
+        default:
+            return 300
+            
+        }
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 40
+        switch section {
+        case 0:
+            return 1
+        default:
+            return 16
+            
+        }
     }
     
 //    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
