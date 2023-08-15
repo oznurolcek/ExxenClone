@@ -16,6 +16,7 @@
 		89A6CB532A819A9500F4F53E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89A6CB522A819A9500F4F53E /* Assets.xcassets */; };
 		89A6CB562A819A9500F4F53E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89A6CB542A819A9500F4F53E /* LaunchScreen.storyboard */; };
 		89A6CB632A81A03500F4F53E /* Movies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A6CB622A81A03500F4F53E /* Movies.swift */; };
+		89B8A1C62A8BF7E50015415A /* NavBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B8A1C52A8BF7E50015415A /* NavBarController.swift */; };
 		89E287952A8269B200C28DDF /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E287942A8269B200C28DDF /* MovieTableViewCell.swift */; };
 		89E287972A8269D900C28DDF /* MovieCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E287962A8269D900C28DDF /* MovieCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
@@ -32,6 +33,7 @@
 		89A6CB552A819A9500F4F53E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89A6CB572A819A9500F4F53E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		89A6CB622A81A03500F4F53E /* Movies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movies.swift; sourceTree = "<group>"; };
+		89B8A1C52A8BF7E50015415A /* NavBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBarController.swift; sourceTree = "<group>"; };
 		89E287942A8269B200C28DDF /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
 		89E287962A8269D900C28DDF /* MovieCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -90,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				89A6CB4D2A819A9400F4F53E /* ViewController.swift */,
+				89B8A1C52A8BF7E50015415A /* NavBarController.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -208,6 +211,7 @@
 				89A6CB4A2A819A9400F4F53E /* AppDelegate.swift in Sources */,
 				89E287972A8269D900C28DDF /* MovieCollectionViewCell.swift in Sources */,
 				89A6CB632A81A03500F4F53E /* Movies.swift in Sources */,
+				89B8A1C62A8BF7E50015415A /* NavBarController.swift in Sources */,
 				89A6CB4C2A819A9400F4F53E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

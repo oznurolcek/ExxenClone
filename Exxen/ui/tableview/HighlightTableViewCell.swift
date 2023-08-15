@@ -40,7 +40,12 @@ class HighlightTableViewCell: UITableViewCell {
 
 }
 
-extension HighlightTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource {
+extension HighlightTableViewCell: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+            return CGSize(width: collectionView.bounds.size.width, height: 600)
+        }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return collectionScrollCount
     }

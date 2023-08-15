@@ -20,24 +20,14 @@ class ViewController: UIViewController {
         moviesTableView.dataSource = self
         
         //MARK: logo title
-        let logoContainer = UIView(frame: CGRect(x: 0, y: 0, width: 270, height: 40))
-
-         let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 270, height: 40))
-         imageView.contentMode = .scaleAspectFit
-         let image = UIImage(named: "Exxen")
-         imageView.image = image
-         logoContainer.addSubview(imageView)
-         navigationItem.titleView = logoContainer
         
-        navigationItem.rightBarButtonItem?.tintColor = .white
         
-        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
-        navigationController?.navigationBar.shadowImage = UIImage()
-        navigationController?.navigationBar.isTranslucent = true
-
+ 
+        
         
         moviesTableView.backgroundColor = UIColor(named: "BackgroundColor")
         moviesTableView.sectionHeaderTopPadding = 0
+        moviesTableView.contentInset = UIEdgeInsets(top: -100, left: 0, bottom: 0, right: 0)
 
     }
 
@@ -57,7 +47,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
             return nil
         default:
             let view = UIView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
-            let label = UILabel(frame: CGRect(x: 15, y: 5, width: tableView.frame.width, height: 20))
+            let label = UILabel(frame: CGRect(x: 5, y: 5, width: tableView.frame.width, height: 20))
             label.font = UIFont(name: "Lato", size: 20.0)
             label.text = movieData[section].sectionType
             label.textColor = .white
@@ -97,7 +87,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch indexPath.section {
         case 0:
-            return 500
+            return 600
         default:
             return 300
             
@@ -123,9 +113,10 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
 //    }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        moviesTableView.deselectRow(at: indexPath, animated: true)
+        moviesTableView.deselectRow(at: indexPath, animated: false)
     }
     
+
     
     
 }
