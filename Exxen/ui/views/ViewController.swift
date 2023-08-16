@@ -11,32 +11,32 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var moviesTableView: UITableView!
     
-
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //MARK: logo
+        let logoContainer = UIView(frame: CGRect(x: 0, y: 0, width: 270, height: 40))
+
+         let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 270, height: 40))
+         imageView.contentMode = .scaleAspectFit
+         let image = UIImage(named: "Exxen")
+         imageView.image = image
+         logoContainer.addSubview(imageView)
+         navigationItem.titleView = logoContainer
+
+        self.navigationItem.rightBarButtonItem?.tintColor = .white
         
         moviesTableView.delegate = self
         moviesTableView.dataSource = self
         
-        //MARK: logo title
-        
-        
- 
-        
-        
         moviesTableView.backgroundColor = UIColor(named: "BackgroundColor")
         moviesTableView.sectionHeaderTopPadding = 0
         moviesTableView.contentInset = UIEdgeInsets(top: -100, left: 0, bottom: 0, right: 0)
-
     }
-
-
 }
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
-
     func numberOfSections(in tableView: UITableView) -> Int {
         return movieData.count
     }
@@ -57,15 +57,6 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         }
     }
     
-//    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-//        switch section {
-//        case 0:
-//            return nil
-//        default:
-//            return movieData[section].sectionType
-//        }
-//
-//    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
@@ -81,7 +72,6 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
             cell.moviesCollectionView.tag = indexPath.section
             return cell
         }
-        
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -90,7 +80,6 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
             return 600
         default:
             return 300
-            
         }
     }
     
@@ -100,24 +89,11 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
             return 1
         default:
             return 16
-            
         }
     }
-    
-//    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
-//        view.tintColor = .black
-//    }
-
-//    func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
-//        cell.backgroundColor = .black
-//    }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         moviesTableView.deselectRow(at: indexPath, animated: false)
     }
-    
-
-    
-    
 }
 

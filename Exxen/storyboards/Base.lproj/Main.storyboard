@@ -34,7 +34,7 @@
                                             <subviews>
                                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="SrD-VY-IVt">
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="500"/>
-                                                    <color key="backgroundColor" red="0.92156863209999995" green="0.43137252329999998" blue="0.45098042490000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <color key="backgroundColor" name="BackgroundColor"/>
                                                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="6Dq-zz-XAN">
                                                         <size key="itemSize" width="418" height="425"/>
                                                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -52,11 +52,26 @@
                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sizidinliyorum" translatesAutoresizingMaskIntoConstraints="NO" id="42B-2J-rfk">
                                                                         <rect key="frame" x="0.0" y="0.0" width="414" height="500"/>
                                                                     </imageView>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sizi Dinliyorum" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1W2-7M-5Gn">
+                                                                        <rect key="frame" x="8" y="415" width="398" height="31.5"/>
+                                                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="22"/>
+                                                                        <color key="textColor" systemColor="tertiarySystemBackgroundColor"/>
+                                                                        <color key="highlightedColor" red="0.25098040700000002" green="0.25098040700000002" blue="0.25098040700000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                        <color key="shadowColor" red="0.25098040700000002" green="0.25098040700000002" blue="0.25098040700000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                    </label>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZEX-EP-T1L">
-                                                                        <rect key="frame" x="152.5" y="457" width="109" height="35"/>
+                                                                        <rect key="frame" x="161.5" y="454.5" width="91" height="29.5"/>
                                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <state key="normal" title="Button"/>
-                                                                        <buttonConfiguration key="configuration" style="filled" title="Hemen İzle">
+                                                                        <buttonConfiguration key="configuration" style="filled">
+                                                                            <attributedString key="attributedTitle">
+                                                                                <fragment content="Hemen İzle">
+                                                                                    <attributes>
+                                                                                        <font key="NSFont" size="13" name="HelveticaNeue-Medium"/>
+                                                                                        <font key="NSOriginalFont" size="12" name="Helvetica"/>
+                                                                                    </attributes>
+                                                                                </fragment>
+                                                                            </attributedString>
                                                                             <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                             <color key="baseBackgroundColor" systemColor="systemYellowColor"/>
                                                                         </buttonConfiguration>
@@ -64,17 +79,10 @@
                                                                             <action selector="watchButtonAct:" destination="bIm-ed-iFW" eventType="touchUpInside" id="Tqc-ho-HNi"/>
                                                                         </connections>
                                                                     </button>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sizi Dinliyorum" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1W2-7M-5Gn">
-                                                                        <rect key="frame" x="8" y="421" width="398" height="28"/>
-                                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
-                                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                        <color key="highlightedColor" red="0.25098040700000002" green="0.25098040700000002" blue="0.25098040700000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                                        <color key="shadowColor" red="0.25098040700000002" green="0.25098040700000002" blue="0.25098040700000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                                    </label>
                                                                 </subviews>
                                                                 <constraints>
                                                                     <constraint firstAttribute="bottom" secondItem="42B-2J-rfk" secondAttribute="bottom" id="HOP-7d-n97"/>
-                                                                    <constraint firstAttribute="bottom" secondItem="ZEX-EP-T1L" secondAttribute="bottom" constant="8" id="Puk-S1-OIB"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="ZEX-EP-T1L" secondAttribute="bottom" constant="16" id="Puk-S1-OIB"/>
                                                                     <constraint firstAttribute="trailing" secondItem="42B-2J-rfk" secondAttribute="trailing" id="k3G-x6-Wyw"/>
                                                                     <constraint firstItem="42B-2J-rfk" firstAttribute="top" secondItem="6uQ-M4-qFP" secondAttribute="top" id="m7l-6n-3w7"/>
                                                                     <constraint firstAttribute="trailing" secondItem="1W2-7M-5Gn" secondAttribute="trailing" constant="8" id="n3f-Bq-niP"/>
@@ -326,6 +334,9 @@
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tertiarySystemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>

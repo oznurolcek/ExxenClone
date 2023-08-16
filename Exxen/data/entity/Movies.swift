@@ -37,10 +37,10 @@ class Movies {
 
 var movieData: [MovieData] = [
     MovieData(sectionType: "Hemen İzle", movie: [
-        Movies(name: "Sizi Dinliyorum", imageName: "sizidinliyorum"),
+        Movies(name: "Gibi", imageName: "gibi"),
         Movies(name: "Konuşanlar", imageName: "konusanlar"),
         Movies(name: "O Ses Türkiye Rap", imageName: "osesturkiyerap"),
-        Movies(name: "Gibi", imageName: "gibi"),
+        Movies(name: "Sizi Dinliyorum", imageName: "sizidinliyorum"),
         Movies(name: "Leyla ile Mecnun", imageName: "leylailemecnun"),
         Movies(name: "Hükümsüz", imageName: "hukumsuz"),
         Movies(name: "Aşk Kumardır", imageName: "askkumardir"),
@@ -49,10 +49,10 @@ var movieData: [MovieData] = [
     ]),
     MovieData(sectionType: "Öne Çıkanlar", movie: [
         Movies(name: "Leyla ile Mecnun", imageName: "leylailemecnun"),
-        Movies(name: "Tolgshow Filtresiz", imageName: "tolgshowfiltresiz"),
-        Movies(name: "Gibi", imageName: "gibi"),
-        Movies(name: "O Ses Türkiye Rap", imageName: "osesturkiyerap"),
         Movies(name: "Konuşanlar", imageName: "konusanlar"),
+        Movies(name: "O Ses Türkiye Rap", imageName: "osesturkiyerap"),
+        Movies(name: "Gibi", imageName: "gibi"),
+        Movies(name: "Tolgshow Filtresiz", imageName: "tolgshowfiltresiz"),
         Movies(name: "Türkiye'deki Seri Katiller", imageName: "turkiyedekiserikatiller"),
         Movies(name: "Sadece Arkadaşız", imageName: "sadecearkadasiz"),
         Movies(name: "Aşk Kumardır", imageName: "askkumardir"),

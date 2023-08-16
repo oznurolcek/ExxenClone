@@ -26,18 +26,16 @@ class HighlightTableViewCell: UITableViewCell {
         
         let screenWidth = UIScreen.main.bounds.width
         let itemWidth = screenWidth
-        
+
         design.itemSize = CGSize(width: itemWidth, height: itemWidth)
         
         moviesCollectionView.collectionViewLayout = design
-
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
     }
-
 }
 
 extension HighlightTableViewCell: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
@@ -55,8 +53,25 @@ extension HighlightTableViewCell: UICollectionViewDelegateFlowLayout, UICollecti
         let scroll = movieData[(moviesCollectionView.tag % movieData[moviesCollectionView.tag].movie!.count)].movie![indexPath.row % movieData[moviesCollectionView.tag].movie!.count]
         
         let cell = moviesCollectionView.dequeueReusableCell(withReuseIdentifier: "highlightCollectionViewCell", for: indexPath) as! HighlightCollectionViewCell
+        
+        let gradient = CAGradientLayer()
+        gradient.frame = CGRect(x: 0, y: self.bounds.height - 200.0, width: self.bounds.width, height: 200.0)
+        gradient.colors = [UIColor.clear.cgColor, UIColor.black.withAlphaComponent(0.9).cgColor]
+        cell.movieImageView.layer.insertSublayer(gradient, at: 0)
+      
+        
+//        let gradientLayer = CAGradientLayer()
+//        gradientLayer.frame = cell.movieImageView.bounds
+//
+//        gradientLayer.colors = [UIColor.clear.cgColor, UIColor.black.cgColor]
+//        gradientLayer.locations = [0.7, 1.0]
+//
+//        cell.movieImageView.layer.addSublayer(gradientLayer)
+
+
         cell.movieImageView.image = UIImage(named: scroll.imageName!)
         cell.movieNameLabel.text = scroll.name!
+        
         return cell
     }
     
@@ -65,6 +80,4 @@ extension HighlightTableViewCell: UICollectionViewDelegateFlowLayout, UICollecti
         collectionScrollCount += 50
         moviesCollectionView.reloadData()
     }
-    
-    
 }
