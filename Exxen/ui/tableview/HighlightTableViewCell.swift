@@ -54,21 +54,6 @@ extension HighlightTableViewCell: UICollectionViewDelegateFlowLayout, UICollecti
         
         let cell = moviesCollectionView.dequeueReusableCell(withReuseIdentifier: "highlightCollectionViewCell", for: indexPath) as! HighlightCollectionViewCell
         
-        let gradient = CAGradientLayer()
-        gradient.frame = CGRect(x: 0, y: self.bounds.height - 200.0, width: self.bounds.width, height: 200.0)
-        gradient.colors = [UIColor.clear.cgColor, UIColor.black.withAlphaComponent(0.9).cgColor]
-        cell.movieImageView.layer.insertSublayer(gradient, at: 0)
-      
-        
-//        let gradientLayer = CAGradientLayer()
-//        gradientLayer.frame = cell.movieImageView.bounds
-//
-//        gradientLayer.colors = [UIColor.clear.cgColor, UIColor.black.cgColor]
-//        gradientLayer.locations = [0.7, 1.0]
-//
-//        cell.movieImageView.layer.addSublayer(gradientLayer)
-
-
         cell.movieImageView.image = UIImage(named: scroll.imageName!)
         cell.movieNameLabel.text = scroll.name!
         
@@ -76,7 +61,6 @@ extension HighlightTableViewCell: UICollectionViewDelegateFlowLayout, UICollecti
     }
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        print(collectionScrollCount)
         collectionScrollCount += 50
         moviesCollectionView.reloadData()
     }
