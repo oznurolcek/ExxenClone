@@ -1,6 +1,6 @@
 # ExxenClone
 
-# Screenshots
+## Screenshots
 
 <img width="200" alt="Exxen" src="https://github.com/oznurolcek/ExxenClone/assets/80714030/f063c231-e9c2-4e2e-9c20-540811b56fdb">
 <img width="200" alt="Exxen2" src="https://github.com/oznurolcek/ExxenClone/assets/80714030/314745ba-6730-440e-8462-e203e94defe2">
