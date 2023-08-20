@@ -1,5 +1,7 @@
 # ExxenClone
 
+Exxen clone app, home screen design.
+
 ## Screenshots
 
 <img width="200" alt="Exxen" src="https://github.com/oznurolcek/ExxenClone/assets/80714030/f063c231-e9c2-4e2e-9c20-540811b56fdb">
